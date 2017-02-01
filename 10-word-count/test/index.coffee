@@ -40,3 +40,19 @@ describe '10-word-count', ->
   # !!!!!
   # Make the above tests pass and add more tests!
   # !!!!!
+
+  it 'should count number of lines', (done) ->
+    input = 'The\n"Quick Brown Fox"\njumps over the lazy dog'
+    expected = words: 7, lines: 3
+    helper input, expected, done
+
+  it 'Camel cased words should be counted as multiple words', (done) ->
+    input = 'TheQuick\nBrownFox\njumps\nOverTheLazy\ndog'
+    expected = words: 9, lines: 5
+    helper input, expected, done
+
+  # !!!!!
+  # Could cover more tests here for when text includes
+  # characters other than alpha-numeric and chars and
+  # bytes count
+  # !!!!!
