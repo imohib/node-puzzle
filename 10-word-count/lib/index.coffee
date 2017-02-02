@@ -34,10 +34,7 @@ module.exports = ->
         words += 1
       else
         camelCasedTokens = lineTokens.filter(checkCamelCasedWord)
-        # console.log("CC: " + camelCasedTokens)
         nonCamelCasedTokens = lineTokens.filter(checkNonCamelCasedWord)
-        # console.log("NCC: " + nonCamelCasedTokens)
-
         addCamelCasedWords(camelCasedTokens)
         words += nonCamelCasedTokens.length
 
